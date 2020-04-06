@@ -14,9 +14,9 @@ app.use(methodOverride());
 app.use(cors());
 
 var opts = {
-	key: fs.readFileSync('server_key.pem'),
-	cert: fs.readFileSync('server_cert.pem'),
-	ca: [fs.readFileSync('server_cert.pem')],
+	key: fs.readFileSync('./certs/server_key.pem'),
+	cert: fs.readFileSync('./certs/server_cert.pem'),
+	ca: [fs.readFileSync('./certs/server_ca.pem')],
 	requestCert: true,
 	rejectUnauthorized: false,
 	agent: false
